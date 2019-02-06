@@ -1,0 +1,18 @@
+.input
+{
+ background-color: #3498db;
+ border-bottom: 5px solid #2980B9;
+ padding: 10px 40px;
+ border-radius: 5px;
+ font-size: 18px;
+ color: #FFF;
+ text-align: center;
+}
+.input:active
+{
+ border-bottom: 1px solid;
+
+}
+p{
+    
+}
