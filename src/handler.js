@@ -24,8 +24,6 @@ exports.handelResult = (request, respone) => {
 
   requestApi(option, (err, res, body) => {
     if (err) {
-      // eslint-disable-next-line no-console
-      console.log(err);
       const responseSend = { error: err };
       respone.writeHead(500, { 'content-type': 'application/json' });
       respone.end(JSON.stringify(responseSend));
@@ -44,6 +42,7 @@ exports.staticHandle = (request, response) => {
     html: 'text/html',
     css: 'text/css',
     js: 'application/javascript',
+    jpg: 'image/jpg',
   };
   const filePath = path.join(__dirname, '..', endPoint);
 
@@ -53,7 +52,6 @@ exports.staticHandle = (request, response) => {
       response.end('<h2>server error</h2>');
     } else {
       response.writeHead(200, { 'content-type': contentType[extention] });
-      console.log(file.toString())
       response.end(file);
     }
   });
@@ -67,7 +65,6 @@ exports.notFoundHandle = (request, response) => {
       response.end('<h2>Internal Server Error</h2>');
     } else {
       response.writeHead(404, { 'content-type': 'text/html' });
-      console.log(file)
       response.end(file);
     }
   });
