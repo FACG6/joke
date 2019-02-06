@@ -52,7 +52,6 @@ exports.staticHandle = (request, response) => {
       response.end('<h2>server error</h2>');
     } else {
       response.writeHead(200, { 'content-type': contentType[extention] });
-      console.log(file.toString())
       response.end(file);
     }
   });
@@ -66,7 +65,6 @@ exports.notFoundHandle = (request, response) => {
       response.end('<h2>Internal Server Error</h2>');
     } else {
       response.writeHead(404, { 'content-type': 'text/html' });
-      console.log(file)
       response.end(file);
     }
   });
