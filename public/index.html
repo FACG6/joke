@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/css/index.css" />
+    <title>Joke</title>
+</head>
+
+<body>
+    <header class="header">
+        JOKE Entrainement
+    </header>
+    <div class='container'>
+        <div class=''>
+            <form action='/result' method='GET'>
+                <input type='submit' id='send' value='New Joke'>
+            </form>
+        </div>
+        <div class='show-joke' id='show'>
+            <p class='setup' id='set'></p>
+            <p class='punchline' id='punch'></p>
+        </div>
+    </div>
+    <script src='public/js/index.js'></script>
+    <script src='public/js/dom.js'></script>
+</body>
+
+</html>
