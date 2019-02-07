@@ -42,6 +42,7 @@ form input{
 form input:hover{
     background-color: #ffffff;
     color: #827d02f7;
+    cursor: pointer;
 }
 
 .container{
